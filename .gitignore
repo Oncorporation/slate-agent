@@ -1,0 +1,6 @@
+.slate/harness
+.claude/agents
+.github/skills
+.github/agents
+*.fountain.bak
+.DS_Store

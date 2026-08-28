@@ -1,0 +1,7 @@
+{
+  "name": "slate",
+  "version": "1.0.0",
+  "description": "Writers' room agent with harness-specific skills and subagents",
+  "skills": "./skills",
+  "agents": "./agents"
+}

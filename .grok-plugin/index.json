@@ -1,0 +1,19 @@
+{
+  "name": "slate",
+  "description": "SLATE writers' room agent — interview, subagents, screenplay, six-frame boards",
+  "version": "1.0.0",
+  "skills": [
+    "skills/slate",
+    "skills/slate-interview",
+    "skills/slate-premise",
+    "skills/slate-structure",
+    "skills/slate-drama",
+    "skills/slate-dialogue",
+    "skills/slate-character",
+    "skills/slate-scene",
+    "skills/slate-assets",
+    "skills/slate-camera",
+    "skills/slate-boards",
+    "skills/slate-fountain"
+  ]
+}
