@@ -60,13 +60,23 @@ echo "Installing SLATE for $HARNESS"
 
 case "$HARNESS" in
   grok)
+    mkdir -p "$HOME/.grok/skills" "$HOME/.grok/agents"
     for s in "${SKILLS[@]}"; do
       link_skill "$ROOT/skills/$s" "$HOME/.grok/skills/$s"
     done
-    mkdir -p "$HOME/.grok/agents"
     for a in "${AGENTS[@]}"; do
       link_agent "$ROOT/agents/$a.md" "$HOME/.grok/agents/slate-$a.md"
     done
+    # This App Builder / Grok session loads /workspace/.grok/skills
+    if [[ -d /workspace/.grok/skills ]]; then
+      mkdir -p /workspace/.grok/agents
+      for s in "${SKILLS[@]}"; do
+        link_skill "$ROOT/skills/$s" "/workspace/.grok/skills/$s"
+      done
+      for a in "${AGENTS[@]}"; do
+        link_agent "$ROOT/agents/$a.md" "/workspace/.grok/agents/slate-$a.md"
+      done
+    fi
     ;;
   claude)
     for s in "${SKILLS[@]}"; do

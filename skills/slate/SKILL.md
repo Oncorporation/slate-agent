@@ -3,9 +3,12 @@ name: slate
 description: >
   Use when the user wants to write a screenplay, interview a story, run the SLATE
   writers' room, pick a harness (Grok, Claude, Hermes, Copilot), or orchestrate
-  structure, dialogue, camera, or six-frame storyboards.
+  structure, dialogue, camera, or six-frame storyboards. Triggers on SLATE,
+  screenplay, storyboard, beat sheet, fountain, writers' room, Open SLATE.
 version: 1.0.0
+user-invocable: true
 metadata:
+  short-description: Writers' room — interview, subagents, screenplay, six-frame boards
   hermes:
     category: creative
     tags: [screenplay, storyboard, writers-room, film]
