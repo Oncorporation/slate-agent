@@ -40,9 +40,26 @@ echo "$HARNESS" > "$ROOT/.slate/harness"
 link_skill() {
   local src="$1" dest="$2"
   mkdir -p "$(dirname "$dest")"
-  rm -f "$dest"
+  rm -rf "$dest"
   ln -s "$src" "$dest"
   echo "  skill → $dest"
+}
+
+copy_skill() {
+  local src="$1" dest="$2"
+  mkdir -p "$(dirname "$dest")"
+  rm -rf "$dest"
+  mkdir -p "$dest"
+  cp -a "$src/." "$dest/"
+  echo "  skill copy → $dest"
+}
+
+copy_agent() {
+  local src="$1" dest="$2"
+  mkdir -p "$(dirname "$dest")"
+  rm -f "$dest"
+  cp "$src" "$dest"
+  echo "  agent copy → $dest"
 }
 
 link_agent() {
@@ -60,23 +77,25 @@ echo "Installing SLATE for $HARNESS"
 
 case "$HARNESS" in
   grok)
-    mkdir -p "$HOME/.grok/skills" "$HOME/.grok/agents"
-    for s in "${SKILLS[@]}"; do
-      link_skill "$ROOT/skills/$s" "$HOME/.grok/skills/$s"
-    done
-    for a in "${AGENTS[@]}"; do
-      link_agent "$ROOT/agents/$a.md" "$HOME/.grok/agents/slate-$a.md"
-    done
-    # This App Builder / Grok session loads /workspace/.grok/skills
-    if [[ -d /workspace/.grok/skills ]]; then
-      mkdir -p /workspace/.grok/agents
+    # Real directories — grok.com / Grok Build drop symlink skills on session start
+    grok_roots=("$HOME/.grok/skills")
+    [[ -d /workspace/.grok/skills ]] && grok_roots+=("/workspace/.grok/skills")
+    mkdir -p /home/workdir/.grok/skills && grok_roots+=("/home/workdir/.grok/skills")
+    grok_agent_roots=("$HOME/.grok/agents")
+    [[ -d /workspace/.grok ]] && grok_agent_roots+=("/workspace/.grok/agents")
+    mkdir -p /home/workdir/.grok/agents && grok_agent_roots+=("/home/workdir/.grok/agents")
+    for dest_root in "${grok_roots[@]}"; do
+      mkdir -p "$dest_root"
       for s in "${SKILLS[@]}"; do
-        link_skill "$ROOT/skills/$s" "/workspace/.grok/skills/$s"
+        copy_skill "$ROOT/skills/$s" "$dest_root/$s"
       done
+    done
+    for dest_root in "${grok_agent_roots[@]}"; do
+      mkdir -p "$dest_root"
       for a in "${AGENTS[@]}"; do
-        link_agent "$ROOT/agents/$a.md" "/workspace/.grok/agents/slate-$a.md"
+        copy_agent "$ROOT/agents/$a.md" "$dest_root/slate-$a.md"
       done
-    fi
+    done
     ;;
   claude)
     for s in "${SKILLS[@]}"; do

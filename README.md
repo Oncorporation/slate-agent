@@ -1,39 +1,36 @@
 # SLATE
 
-A writers' room **agent** — not a chatbot wrapper. SLATE interviews you from premise to pages, then orchestrates specialist **subagents** (structure, dialogue, camera, six-frame boards, assets) using **skills** that install for the harness you actually run: **Grok**, **Claude Code**, **Hermes**, or **Copilot / Codex**.
+A writers' room **agent** — not a chatbot wrapper. SLATE interviews you from premise to pages, then orchestrates specialist desks (structure, dialogue, camera, six-frame boards, assets).
 
-Lineage: [zhangzhangco/film-production-skills](https://github.com/zhangzhangco/film-production-skills) (breakdown, assets, camera), scene-writing SCENE anatomy, story-systems Fountain craft, Hermes six-frame coverage.
+Lineage: [zhangzhangco/film-production-skills](https://github.com/zhangzhangco/film-production-skills), scene-writing SCENE anatomy, Fountain craft, Hermes six-frame coverage.
 
-## Install
+## On grok.com (read this first)
+
+Create Skill / Manage Skills will **not** import this GitHub repo.
+
+**Do this:** grok.com → **Create Skill** → paste [`docs/grok-create-skill.md`](docs/grok-create-skill.md) → turn **slate** on in Manage Skills → **new chat** → `Open SLATE. Interview me. Do not overwrite AGENTS.md.`
+
+Full UI truth table, paths, and why one skill beats twelve: **[`GROK.md`](GROK.md)**.
+
+SLATE is a **guest**. It never replaces the host project's `AGENTS.md`. Room files go in `artifacts/slate/`.
+
+## Install (CLI / Grok Build / Claude / Hermes / Copilot)
 
 ```bash
 git clone https://github.com/Oncorporation/slate-agent.git
 cd slate-agent
-./install.sh            # auto-detect harness
-# or:
-./install.sh grok
-./install.sh claude
-./install.sh hermes
-./install.sh copilot
+./install.sh grok      # copies real skill folders, not symlinks
+# or: claude | hermes | copilot
 ```
 
-The installer:
+| Harness | Skills land in |
+|---|---|
+| Grok | `/home/workdir/.grok/skills/slate*` and `~/.grok/skills/` (real directories) |
+| Claude Code | `~/.claude/skills/slate-*` + `.claude/agents/` |
+| Hermes | `~/.hermes/skills/creative/slate-*` |
+| Copilot / Codex | `~/.codex/skills/` and `.github/skills/` |
 
-1. Detects (or takes) the harness.
-2. Writes `.slate/harness` so later sessions do not re-ask.
-3. Symlinks the matching skill set into that harness's skills directory.
-4. Copies subagent profiles where the harness expects them.
-
-| Harness | Skills land in | Subagents land in |
-|---|---|---|
-| Grok | `~/.grok/skills/slate-*` | `~/.grok/agents/` (if present) + project `agents/` |
-| Claude Code | `~/.claude/skills/slate-*` | `~/.claude/agents/slate-*` and `.claude/agents/` |
-| Hermes | `~/.hermes/skills/creative/slate-*` | Hermes loads skills; desks are skill-routed |
-| Copilot / Codex | `~/.codex/skills/slate-*` or `.github/skills/` | `agents/` + `.github/agents/` |
-
-Then open **this folder** (or a new screenplay folder that contains `AGENTS.md`) in that harness and say:
-
-> Open SLATE. Interview me and build the screenplay.
+Then: `Open SLATE. Interview me and build the screenplay.`
 
 ## What happens
 
@@ -50,9 +47,13 @@ Showrunner (interview)
   └─ Boards           exactly six frames per shot
 ```
 
-The room **asks** before it dumps a feature. One scene, one beat, one boarded shot unless you say otherwise.
+One scene, one beat, one boarded shot unless you say otherwise. The single `slate` skill can run this whole order; the other eleven desks are optional.
 
 ## Project files the room writes
+
+In a Grok Project: `artifacts/slate/…`
+
+Elsewhere:
 
 ```
 bible.md
@@ -62,12 +63,9 @@ scenes/<nn>-slug.fountain
 shots.md
 storyboards/<shot-id>.md
 assets.md
-.slate/harness
 ```
 
 ## Harness postures
-
-Generation quality still depends on the model. The **posture** is what changes:
 
 - **Grok** — visual-first, lean action, cut what the image shows.
 - **Claude** — diagnose, name the value shift, Fountain-clean, preserve dialogue.
