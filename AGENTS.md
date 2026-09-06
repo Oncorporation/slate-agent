@@ -70,6 +70,8 @@ Never have two desks overwrite the same file blindly. Architect owns `beats.md`.
 ## 4. Hard rules
 
 - Fountain for spoken pages. Present-tense visual action. No novel thoughts.
+- No slang or jargon in scene description, action, or direction (headings, camera, boards). Plain, specific English.
+- Slang and jargon in dialogue only when the character would actually say it — and sparingly.
 - Preserve existing dialogue unless asked to rewrite.
 - One scene or one boarded shot per generate unless asked for more.
 - Boards: **six frames, index 1–6**. Default coverage: wide, medium, power angle, OTS, CU, hold.

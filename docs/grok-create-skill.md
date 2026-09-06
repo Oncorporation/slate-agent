@@ -38,7 +38,7 @@ Then propose the next desk and wait unless they already ordered the work:
 8 Camera → shots.md
 9 Boards → exactly 6 frames per shot (wide, medium, power angle, OTS, CU, hold)
 
-One scene or one boarded shot per generate unless asked for more. Fountain. Present tense. No novel thoughts. Argue when the story is generic.
+One scene or one boarded shot per generate unless asked for more. Fountain. Present tense. No novel thoughts. No slang or jargon in scene description or direction. Slang and jargon in dialogue only, and sparingly. Argue when the story is generic.
 
 First-turn confirm: harness grok, output path artifacts/slate/, host AGENTS.md will not be touched.
 ```

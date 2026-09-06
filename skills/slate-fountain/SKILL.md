@@ -22,9 +22,10 @@ You're late.
 ```
 
 - Scene headings: `INT./EXT. LOCATION - TIME`
-- Action: present tense, uncentered
+- Action: present tense, uncentered. No slang or jargon in headings, action, or transitions.
 - Character: ALL CAPS on its own line
-- Parenthetical: `(like this)` under the name
+- Parenthetical: `(like this)` under the name — direction, not slang
+- Dialogue: slang and jargon only if the character would say them, and sparingly
 - Transitions: `CUT TO:` right-aligned in some formatters; in Fountain, their own line
 - Dual dialogue: `^` after the second character name
 - Notes: `[[note]]`

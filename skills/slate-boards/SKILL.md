@@ -25,6 +25,8 @@ Default coverage:
 
 Each frame: title, size, angle, movement, action, optional dialogue, lighting, notes.
 
+Frame action and notes in plain English. No slang or jargon in direction. Dialogue on a frame may use slang only if the spoken line would.
+
 If the shot is a lock-off, still vary scale or time across six beats of the action.
 
 Write `storyboards/<shot-id>.md` from `templates/storyboard.md`.

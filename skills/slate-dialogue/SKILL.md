@@ -12,6 +12,8 @@ No filler. Subtext over text. Each line reveals character or advances plot. Max 
 
 Parentheticals only when the read is non-obvious. Differentiate vocabulary and rhythm.
 
+Slang and jargon only if that character would say them, and sparingly. Never in parentheticals.
+
 Read-aloud: if it dies in a mouth, cut it.
 
 Edit only dialogue blocks in the current Fountain file unless asked for a full-script pass.

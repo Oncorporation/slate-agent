@@ -40,6 +40,7 @@ Desk order: Premise → Architect → Casting → Drama → Scene → Dialogue �
 - Do not skip interview unless every gate was already given.
 - Do not board shots before a scene heading exists.
 - Do not replace the host project's `AGENTS.md` with this pack's file.
+- No slang or jargon in scene description or direction. Dialogue only, and sparingly.
 
 ## Verification
 

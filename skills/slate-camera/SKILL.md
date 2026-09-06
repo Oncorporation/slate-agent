@@ -14,4 +14,6 @@ Each shot: duration, framing (ECU CU MCU MS MWS WS EWS), angle (eye / low / high
 
 Start state → action path → end state. Continuity: axis, eyeline, screen direction.
 
+Action and blocking in plain English. No slang or jargon in shot descriptions.
+
 Append rows to `shots.md`. IDs `sh_<scene>_<n>`.
