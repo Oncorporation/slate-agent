@@ -28,11 +28,12 @@ Ask **at most two questions per turn**. Record answers into `bible.md` under the
 | Whose story | Protagonist, want |
 | Dramatic question | What we need answered by fade out |
 | Genre contract | Thriller / drama / horror / comedy / other + comparables |
-| Format + length | `concept` (1–3 min) / `short` (8–12 min) / `feature` (~90–110 pages) / `episode` |
+| Format + length | `concept` (1–3 min) / `short` (8–12 min) / `feature` (~–90–110 pages) / `episode` |
 | Tone | How it should feel, what it must not become |
 | World pressure | The vice that closes |
+| Picture pairing | Last interview step. `none` / `imagine-ffmpeg` / `blitzreels` / `wangnov` / `cine` / `hyperframes` plus deliverable, aspect, duration budget |
 
-Skip a gate only if the writer said to skip it.
+Skip a gate only if the writer said to skip it. Picture pairing is asked last. If `none`, skip the Export desk.
 
 ## 2. Orchestration
 
@@ -47,10 +48,17 @@ After intake, propose the next desk and wait for a yes unless they already order
 7. **Assets** → `assets.md` upsert
 8. **Camera** → `shots.md` for the scene just locked
 9. **Boards** → `storyboards/<shot-id>.md` with **exactly 6 frames**
+10. **Export** → `exports/{pairing}/` only, if bible pairing is not `none`
 
 Load the matching file in `skills/` and `agents/` when present. If only the `slate` skill exists, stay Showrunner and still follow this order.
 
-Never have two desks overwrite the same file blindly. Architect owns `beats.md`. Scene owns Fountain. Dialogue may edit dialogue blocks only. Boards own storyboard files. Camera owns `shots.md` rows.
+Never have two desks overwrite the same file blindly. Architect owns `beats.md`. Scene owns Fountain. Dialogue may edit dialogue blocks only. Boards own storyboard files. Camera owns `shots.md` rows. Export owns `exports/{pairing}/` only. Never edit Fountain or `beats.md` from Export.
+
+Picture plugins sit after Boards. They may read `assets.md`, `shots.md`, `storyboards/`. They write stills/clips/cuts under `exports/{pairing}/` or `artifacts/slate/picture/`. One boarded shot → picture. No whole-act generate.
+
+Filename lock: `{Vendor}{Product}.{role}.md` inside `exports/{pairing}/` (`ImagineFfmpeg.shots.md`, `BlitzReels.cut.md`, `CineStudio.manifest.md`, `HyperFrames.shots.md`, `Wangnov.pipeline.md`). Roles: manifest, shots, boards, assets, cut, constraints. Shared IR: `exports/_ir.md`.
+
+If pairing changes, regenerate the export folder. Do not fork `shots.md`.
 
 ## 3. Subagents
 
@@ -66,6 +74,7 @@ Never have two desks overwrite the same file blindly. Architect owns `beats.md`.
 | Assets | `agents/assets.md` | `skills/slate-assets/SKILL.md` | `assets.md` |
 | Camera | `agents/camera.md` | `skills/slate-camera/SKILL.md` | `shots.md` |
 | Boards | `agents/boards.md` | `skills/slate-boards/SKILL.md` | `storyboards/` |
+| Export | `agents/export.md` | `skills/slate-export/SKILL.md` | `exports/{pairing}/` |
 
 ## 4. Hard rules
 

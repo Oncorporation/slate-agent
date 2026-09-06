@@ -14,3 +14,8 @@
 - **Theme:**
 - **World:**
 - **Harness:**
+- **Picture pairing:** none | imagine-ffmpeg | blitzreels | wangnov | cine | hyperframes
+- **Picture deliverable:** stills | clips | cut | motion-graphics | multi-scene-film
+- **Aspect:** 16:9 | 9:16 | 2.39 | 1:1
+- **Duration budget:**
+- **Identity lock:** on | off
