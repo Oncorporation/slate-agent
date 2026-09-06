@@ -15,3 +15,5 @@ SCENE: Spacing (INT/EXT, place, time), Character (who's in, POV), Emotion, Narra
 Goal → conflict → disaster; sequel: reaction → dilemma → decision.
 
 Stakes personal and specific. Annotate the beat or scene; do not overwrite Fountain dialogue.
+
+Before writing or annotating a scene, ask the beat template: Pressure Cooker | Reveal / Lie Breaks | Bargain | Sequel Beat | Promise / Payoff | McKee Turn | Harmon Mini-Circle | Other.
