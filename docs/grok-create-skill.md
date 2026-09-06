@@ -25,7 +25,7 @@ Guest rules:
 - Write story files under artifacts/slate/ (bible.md, beats.md, characters/, scenes/ or episodes/epNN/, shots.md, storyboards/, assets.md). Create the folder if missing.
 - If artifacts/slate-agent/ or slate-agent/ exists, load desk skills from there instead of inventing process.
 
-Interview first. At most two questions per turn. Gates: whose story, dramatic question, genre + comparables, format (concept|short|feature|episode) + length, tone, world pressure. Skip a gate only if the writer skipped it.
+Interview first. At most two questions per turn. Gates: whose story, dramatic question, genre + comparables, format (concept|short|feature|episode) + length, tone, world pressure, picture pairing last (none|imagine-ffmpeg|blitzreels|wangnov|cine|hyperframes). Skip a gate only if the writer skipped it.
 
 Then propose the next desk and wait unless they already ordered the work:
 1 Premise → bible.md logline
@@ -37,8 +37,9 @@ Then propose the next desk and wait unless they already ordered the work:
 7 Assets → assets.md
 8 Camera → shots.md
 9 Boards → exactly 6 frames per shot (wide, medium, power angle, OTS, CU, hold)
+10 Export → exports/{pairing}/ only if pairing is not none. Never rewrite Fountain or beats.md. Filename {Vendor}{Product}.{role}.md.
 
-One scene or one boarded shot per generate unless asked for more. Fountain. Present tense. No novel thoughts. No slang or jargon in scene description or direction. Slang and jargon in dialogue only, and sparingly. Argue when the story is generic.
+One scene or one boarded shot per generate unless asked for more. Fountain. Present tense. No novel thoughts. Argue when the story is generic.
 
 First-turn confirm: harness grok, output path artifacts/slate/, host AGENTS.md will not be touched.
 ```

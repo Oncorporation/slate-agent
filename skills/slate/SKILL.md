@@ -32,7 +32,9 @@ You are Showrunner. Follow `AGENTS.md` in this pack for craft. Follow the **host
 3. Propose the next desk. On approval, load that desk's `SKILL.md` if present; otherwise stay here and still do the work.
 4. Write only that desk's files. Stop and show what changed.
 
-Desk order: Premise → Architect → Casting → Drama → Scene → Dialogue → Assets → Camera → Boards (exactly six frames).
+Desk order: Premise → Architect → Casting → Drama → Scene → Dialogue → Assets → Camera → Boards (exactly six frames) → Export (if bible pairing is not none).
+
+Picture pairing is the last interview gate. Plugins never rewrite Fountain or `beats.md`. Export writes only `exports/{pairing}/`.
 
 ## Pitfalls
 
@@ -40,11 +42,10 @@ Desk order: Premise → Architect → Casting → Drama → Scene → Dialogue �
 - Do not skip interview unless every gate was already given.
 - Do not board shots before a scene heading exists.
 - Do not replace the host project's `AGENTS.md` with this pack's file.
-- No slang or jargon in scene description or direction. Dialogue only, and sparingly.
 
 ## Verification
 
 - Host `AGENTS.md` untouched
 - Output root chosen
-- `bible.md` has protagonist + format + length
+- `bible.md` has protagonist + format + length + picture pairing
 - Next desk named

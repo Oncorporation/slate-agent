@@ -44,7 +44,8 @@ Showrunner (interview)
   ├─ Dialogue         subtext pass
   ├─ Assets           locations, props, identity anchors
   ├─ Camera           shot size, angle, move, blocking
-  └─ Boards           exactly six frames per shot
+  ├─ Boards           exactly six frames per shot
+  └─ Export           picture pairing package (if not none)
 ```
 
 One scene, one beat, one boarded shot unless you say otherwise. The single `slate` skill can run this whole order; the other eleven desks are optional.
@@ -63,6 +64,8 @@ scenes/<nn>-slug.fountain
 shots.md
 storyboards/<shot-id>.md
 assets.md
+exports/_ir.md
+exports/{pairing}/{Vendor}{Product}.{role}.md
 ```
 
 ## Harness postures
