@@ -70,13 +70,14 @@ link_agent() {
   echo "  agent → $dest"
 }
 
-SKILLS=(slate slate-interview slate-premise slate-structure slate-drama slate-dialogue slate-character slate-scene slate-assets slate-camera slate-boards slate-fountain slate-export)
-AGENTS=(showrunner premise architect drama dialogue casting scene assets camera boards export)
+SKILLS=(slate slate-interview slate-premise slate-structure slate-drama slate-dialogue slate-character slate-scene slate-assets slate-camera slate-boards slate-fountain slate-export slate-critics)
+AGENTS=(showrunner premise architect drama dialogue casting scene assets camera boards export critics critic-dialogue critic-direction critic-continuity critic-scene critic-picture critic-audio)
 
 echo "Installing SLATE for $HARNESS"
 
 case "$HARNESS" in
   grok)
+    # Real directories — grok.com / Grok Build drop symlink skills on session start
     grok_roots=("$HOME/.grok/skills")
     [[ -d /workspace/.grok/skills ]] && grok_roots+=("/workspace/.grok/skills")
     mkdir -p /home/workdir/.grok/skills && grok_roots+=("/home/workdir/.grok/skills")
