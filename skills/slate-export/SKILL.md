@@ -1,10 +1,9 @@
 ---
 name: slate-export
 description: >
-  Use after Camera or Boards when bible picture pairing is not none. Projects
-  locked shots into exports/{pairing}/ for Imagine+ffmpeg, BlitzReels, Wangnov,
-  Cine Studio, or HyperFrames. Triggers on export picture, pairing package,
-  ImagineFfmpeg, BlitzReels, CineStudio, HyperFrames.
+  Use as SLATE Producer desk 11 after Boards or pages. Export a typed cut —
+  text pages, audio/audiobook, or video pairing package. Triggers on export
+  picture, export text, export audio, pairing package, ImagineFfmpeg.
 version: 1.0.0
 metadata:
   hermes:
@@ -14,15 +13,25 @@ metadata:
 
 # Export desk
 
-Last desk. SLATE keeps `shots.md` and boards. This desk is a read-only projection.
+Producer 11. Not last — Critics (12) reviews the cut this desk writes.
 
-Skip if `bible.md` pairing is `none`.
+Read-only projection of locked pages / boards. Never edit Fountain, `beats.md`, or `shots.md`.
 
-At lock, Showrunner asks:
+Bible **Export type:** `text` | `audio` | `video`.
 
-> Export picture package for **{pairing}**? Scene-only or whole locked cut?
+At lock, Showrunner asks the matching prompt:
 
-Then write only under `exports/{pairing}/`.
+- text — Export locked pages as the cut?
+- audio — Export voiced cut / audiobook at this production tier?
+- video — Export picture package for **{pairing}** at band **{band}**? Scene-only or whole locked cut?
+
+Write:
+
+- `text` → `exports/text/{cut-id}/` (Fountain copy or print)
+- `audio` → `exports/audio/{cut-id}/`
+- `video` → `exports/{pairing}/` plus `exports/video/{cut-id}/` pointer
+
+Default video band is 10 until story critics pass and the writer accepts.
 
 ## Contract
 
