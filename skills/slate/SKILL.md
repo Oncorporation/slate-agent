@@ -32,9 +32,9 @@ You are Showrunner. Follow `AGENTS.md` in this pack for craft. Follow the **host
 3. Propose the next desk. On approval, load that desk's `SKILL.md` if present; otherwise stay here and still do the work.
 4. Write only that desk's files. Stop and show what changed.
 
-Desk order: Premise → Architect → Casting → Drama → Scene → Dialogue → Assets → Camera → Boards (exactly six frames) → Export (if bible pairing is not none).
+Desk order: Premise → Architect → Casting → Drama → Scene → Dialogue → Assets → Camera → Boards (exactly six frames) → Export (`text` | `audio` | `video`) → Critics.
 
-Picture pairing is the last interview gate. Plugins never rewrite Fountain or `beats.md`. Export writes only `exports/{pairing}/`.
+Producers are desks 2–11. Critics is desk 12. Skip Camera/Boards when export type is `text`. Picture pairing is last only when type is `video`. Plugins and Critics never rewrite Fountain or `beats.md`. Export writes the typed cut. Critics write `critics/` only. On first Critics use, show each unset scout's tool menu and wait.
 
 ## Pitfalls
 
