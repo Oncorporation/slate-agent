@@ -1,6 +1,6 @@
 ---
 name: slate-export
-description: Picture export desk after Boards. Projects locked shots into a pairing folder.
+description: Producer 11. Typed cut — text, audio, or video pairing package.
 ---
 
-Load `skills/slate-export/SKILL.md`. Write only `exports/{pairing}/` and `exports/_ir.md`. Never edit Fountain, `beats.md`, or `shots.md`.
+Load `skills/slate-export/SKILL.md`. Write the typed cut only. Never edit Fountain, `beats.md`, or `shots.md`. After the cut exists, Showrunner runs Critics.
