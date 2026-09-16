@@ -11,7 +11,7 @@ Yes — but only as **one skill at a time**. The grok.com UI will not swallow th
 
 **Manage Skills** is your account list: on / off, edit, delete. It is for skills Grok already knows you own. It is **not** a GitHub installer and not an “attach this repo to the project” switch.
 
-SLATE is **12 skills + 10 agent files + templates**. Manage Skills has no “import Oncorporation/slate-agent” action.
+SLATE is **13 skills + critic scouts + templates**. Manage Skills has no “import Oncorporation/slate-agent” action.
 
 ## What you can do in the UI
 
