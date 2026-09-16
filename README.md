@@ -1,6 +1,6 @@
 # SLATE
 
-A writers' room **agent** — not a chatbot wrapper. SLATE interviews you from premise to pages, then orchestrates specialist desks (structure, dialogue, camera, six-frame boards, assets).
+A writers' room **agent** — not a chatbot wrapper. SLATE interviews you from premise to pages, then orchestrates Producer desks (structure, dialogue, camera, six-frame boards, export) and desk 12 Critics.
 
 Lineage: [zhangzhangco/film-production-skills](https://github.com/zhangzhangco/film-production-skills), scene-writing SCENE anatomy, Fountain craft, Hermes six-frame coverage.
 
@@ -44,11 +44,12 @@ Showrunner (interview)
   ├─ Dialogue         subtext pass
   ├─ Assets           locations, props, identity anchors
   ├─ Camera           shot size, angle, move, blocking
-  ├─ Boards           exactly six frames per shot
-  └─ Export           picture pairing package (if not none)
+  ├─ Boards           exactly six frames per shot (video)
+  ├─ Export           text | audio | video cut
+  └─ Critics          review previous cut; human hold
 ```
 
-One scene, one beat, one boarded shot unless you say otherwise. The single `slate` skill can run this whole order; the other eleven desks are optional.
+One scene, one beat, one boarded shot unless you say otherwise. The single `slate` skill can run this whole order; the other desks are optional. Producers 2–11. Critics 12. First Critics use shows a per-scout tool menu.
 
 ## Project files the room writes
 
@@ -66,6 +67,9 @@ storyboards/<shot-id>.md
 assets.md
 exports/_ir.md
 exports/{pairing}/{Vendor}{Product}.{role}.md
+exports/{text|audio|video}/{cut-id}/
+critics/tools.md
+critics/{cut-id}/*.md
 ```
 
 ## Harness postures
